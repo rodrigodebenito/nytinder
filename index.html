@@ -9,33 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->    
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <script type="text/javascript">
-    // This automatically sets the right viewport scale on mobile devices
-    (function() {
-    var scale = 1 / window.devicePixelRatio
-    document.write("<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no\">")
-    })()
-    </script>
-    <link rel="apple-touch-icon" href="framer/images/icon-120.png">
-    <link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
-    <link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
-    <link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
-    <link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
-    <link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
-    <script src="//typeface.nytimes.com/zam5nzz.js"></script>
-    <link rel="stylesheet" href="http://typeface.nytimes.com/k/c/zam5nzz-d.css">
-    <script>try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" type="text/css" href="framer/style.css">
-    <script src="framer/coffee-script.js"></script>
-    <script src="framer/framer.js"></script>
-    <script src="framer/framer.generated.js"></script>
-    <script src="framer/framer.modules.js"></script>
-    <script src="framer/framer.init.js"></script>
-    <title>NYTinder by Rodrigo de Benito Sanz and Mayada Gonimah</title>
+    <![endif]-->
+    <title>Nytinder by rodrigodebenito</title>
   </head>
 
   <body>
@@ -58,169 +33,206 @@
         <section id="main_content">
           <p>NYTinder is a mobile web app that uses Tinder's UI paradigm (swipe right to like, swipe left to dismiss) to navigate New York Times articles and get personalized suggested stories through a custom version of the <a href="http://developer.nytimes.com/docs">NYT API</a>.</p>
 
-          <p>The app is in prototype state at the moment and it was developed as part of The New York Times Hack Week of March 2015. It uses <a href="http://framerjs.com/">framerjs</a> as a base framework to resolve touch interactions and animations.</p>
+<p>The app is in prototype state at the moment and it was developed as part of The New York Times Hack Week of March 2015. It uses <a href="http://framerjs.com/">framerjs</a> as a base framework to resolve touch interactions and animations.</p>
 
-          <p>Due to framerjs restrictions, the app is only supported on webkit browsers (Chrome and Safari) at the moment. To run it directly, simply download the project and open index.html in any of these. Make sure local file restrictions are disabled.</p>
+<p>Due to framerjs restrictions, the app is only supported on webkit browsers (Chrome and Safari) at the moment. To run it directly, simply download the project and open index.html in any of these. Make sure local file restrictions are disabled.</p>
         </section>
-        
-        <section id="demo">
-          <style>
+        <iframe id="demo">
+          <html>
+            <head>
+              <meta charset="utf-8">
+              
+              <meta name="format-detection" content="telephone=no">
+              <meta name="apple-mobile-web-app-capable" content="yes">
+              <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-            .content {
-              color: black;
-              line-height: 1.3;
-              font-family: 'nyt-cheltenham', serif;
-              text-align: center;
-              padding: 35px 45px;
-            }
+              <script type="text/javascript">
+              // This automatically sets the right viewport scale on mobile devices
+              (function() {
+              var scale = 1 / window.devicePixelRatio
+              document.write("<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no\">")
+              })()
+              </script>
 
-            .content h1 {
-              font-weight: 600;
-              font-style: italic;
-              line-height: 1.1;
-            }
+              <link rel="apple-touch-icon" href="framer/images/icon-120.png">
+              <link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+              <link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+              <link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+              <link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+              <link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
 
-            .media {
-              text-align: center;
-              overflow: hidden;
-            }
+              <script src="//typeface.nytimes.com/zam5nzz.js"></script>
+              <link rel="stylesheet" href="http://typeface.nytimes.com/k/c/zam5nzz-d.css">
+              <script>try{Typekit.load();}catch(e){}</script>
 
-            .media img{
-              display: inline-block;
-              width: auto;
-            }
+              <link rel="stylesheet" type="text/css" href="framer/style.css">
 
-            .caption {
-              text-align: left;
-              color: #999;
-              font-size: 18px;
-              text-transform: uppercase;
-              margin: 0 10px;
-              font-family: 'nyt-franklin', sans-serif;
-            }
+              <script src="framer/coffee-script.js"></script>
+              <script src="framer/framer.js"></script>
+              <script src="framer/framer.generated.js"></script>
+              <script src="framer/framer.modules.js"></script>
+              <script src="framer/framer.init.js"></script>
 
-            .actions{
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              margin: 0 50px;
-              padding: 50px 0;
-              border-top: 2px solid #333;
-              overflow: auto;
-              text-align: center;
-              display: block;
-            }
+            </head>
+            <body>
+              <style>
 
-            .icon {
-              display: inline-block;
-              margin: 10px;
-            }
+                .content {
+                  color: black;
+                  line-height: 1.3;
+                  font-family: 'nyt-cheltenham', serif;
+                  text-align: center;
+                  padding: 35px 45px;
+                }
 
-            .icon.star {
-              float: right;
-              margin: 0;
-              display: none;
-            }
+                .content h1 {
+                  font-weight: 600;
+                  font-style: italic;
+                  line-height: 1.1;
+                }
 
-            .done {
-              position: absolute;
-              font-family: 'nyt-franklin', sans-serif;
-              text-align: center;
-              line-height: 1;
-              color: #666;
-              top: 50%;
-              left: 50%;
-              margin-top: -200px;
-              margin-left: -220px;
-              width: 60%;
-            }
+                .media {
+                  text-align: center;
+                  overflow: hidden;
+                }
 
-            .done.full {
-              display: block;
-            }
+                .media img{
+                  display: inline-block;
+                  width: auto;
+                }
 
-            .done.empty {
-              display: none;
-            }
+                .caption {
+                  text-align: left;
+                  color: #999;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  margin: 0 10px;
+                  font-family: 'nyt-franklin', sans-serif;
+                }
 
-            .empty .done.empty {
-              display: block
-            }
+                .actions{
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  margin: 0 50px;
+                  padding: 50px 0;
+                  border-top: 2px solid #333;
+                  overflow: auto;
+                  text-align: center;
+                  display: block;
+                }
 
-            .empty .done.full {
-              display: none
-            }
+                .icon {
+                  display: inline-block;
+                  margin: 10px;
+                }
 
-            .done-copy {
-              width: 60%;
-              margin: auto;
-              line-height: 1.3;
-              font-size: 48px;
-              font-weight: 100;
-            }
+                .icon.star {
+                  float: right;
+                  margin: 0;
+                  display: none;
+                }
 
-            .done button {
-              display: inline-block;
-              font-family: 'nyt-franklin' sans-serif;
-              font-weight: 600;
-              font-size: 50px;
-              background: #4d7b9f;
-              color: white;
-              text-transform: uppercase;
-              padding: 30px 50px;
-              border-radius: 15px;
-              margin-top: 50px;
-              box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            }
+                .done {
+                  position: absolute;
+                  font-family: 'nyt-franklin', sans-serif;
+                  text-align: center;
+                  line-height: 1;
+                  color: #666;
+                  top: 50%;
+                  left: 50%;
+                  margin-top: -200px;
+                  margin-left: -220px;
+                  width: 60%;
+                }
 
-            .done.empty button {
-              font-size: 35px;
-              font-weight: 400;
-              padding: 20px 30px;
-              background: #e33d26;
-            }
+                .done.full {
+                  display: block;
+                }
 
-            iframe {
-              -webkit-transform: scale(1.2, 1.2)
-              -ms-transform: scale(1.2, 1.2);
-              transform: scale(1.2, 1.2);
-            }
-          </style>
-          <script id="webview-closebar" type="text/template">
-            <div style="color:#999; text-align:right; font-size:70px; margin:25px">&times;</div>
-          </script>
-          <script id="webview-iframe" type="text/template">
-            <iframe style="width:<%= width %>px; height:<%= height %>px" src="<%= url %>"></iframe>
-          </script>
-          <script id="article-card" type="text/template">
-            <figure class="media">
-              <img src="<%= imgUrl %>" style="height:<%= Math.min(height*0.6, width) %>px" draggable="false" />
-            </figure>
-            <figcaption class="caption">Photo by The New York Times</figcaption>
-            <div class="content" data-url="<%= url %>" >
-              <h1><%= title %></h1>
-              <footer class="actions">
-                <img src="./images/facebook-icon.png" class="icon facebook"/>
-                <img src="./images/twitter-icon.png" class="icon twitter"/>
-                <img src="./images/star-icon.png" class="icon star"/>
-              </footer>
-            </div>
-          </script>
-          <script id="refill-view" type="text/template">
-            <div class="done full">
-              <h1 class="done-copy">Hungry for more?</h1>
-              <button>Refill</button>
-            </div>
-            <div class="done empty">
-              <h1 class="done-copy">You’re done for now. Check back in a few hours!</h1>
-              <button>Reset</button>
-            </div>
-          </script>
-        </section>
-        
+                .done.empty {
+                  display: none;
+                }
+
+                .empty .done.empty {
+                  display: block
+                }
+
+                .empty .done.full {
+                  display: none
+                }
+
+                .done-copy {
+                  width: 60%;
+                  margin: auto;
+                  line-height: 1.3;
+                  font-size: 48px;
+                  font-weight: 100;
+                }
+
+                .done button {
+                  display: inline-block;
+                  font-family: 'nyt-franklin' sans-serif;
+                  font-weight: 600;
+                  font-size: 50px;
+                  background: #4d7b9f;
+                  color: white;
+                  text-transform: uppercase;
+                  padding: 30px 50px;
+                  border-radius: 15px;
+                  margin-top: 50px;
+                  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+                }
+
+                .done.empty button {
+                  font-size: 35px;
+                  font-weight: 400;
+                  padding: 20px 30px;
+                  background: #e33d26;
+                }
+
+                iframe {
+                  -webkit-transform: scale(1.2, 1.2)
+                  -ms-transform: scale(1.2, 1.2);
+                  transform: scale(1.2, 1.2);
+                }
+              </style>
+              <script id="webview-closebar" type="text/template">
+                <div style="color:#999; text-align:right; font-size:70px; margin:25px">&times;</div>
+              </script>
+              <script id="webview-iframe" type="text/template">
+                <iframe style="width:<%= width %>px; height:<%= height %>px" src="<%= url %>"></iframe>
+              </script>
+              <script id="article-card" type="text/template">
+                <figure class="media">
+                  <img src="<%= imgUrl %>" style="height:<%= Math.min(height*0.6, width) %>px" draggable="false" />
+                </figure>
+                <figcaption class="caption">Photo by The New York Times</figcaption>
+                <div class="content" data-url="<%= url %>" >
+                  <h1><%= title %></h1>
+                  <footer class="actions">
+                    <img src="./images/facebook-icon.png" class="icon facebook"/>
+                    <img src="./images/twitter-icon.png" class="icon twitter"/>
+                    <img src="./images/star-icon.png" class="icon star"/>
+                  </footer>
+                </div>
+              </script>
+              <script id="refill-view" type="text/template">
+                <div class="done full">
+                  <h1 class="done-copy">Hungry for more?</h1>
+                  <button>Refill</button>
+                </div>
+                <div class="done empty">
+                  <h1 class="done-copy">You’re done for now. Check back in a few hours!</h1>
+                  <button>Reset</button>
+                </div>
+              </script>
+            </body>
+          </html>
+        </iframe>
         <footer>
-          NYTinder is maintained by <a href="https://github.com/rodrigodebenito">rodrigodebenito</a><br>
+          Nytinder is maintained by <a href="https://github.com/rodrigodebenito">rodrigodebenito</a><br>
           This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
