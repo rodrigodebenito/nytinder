@@ -1,10 +1,8 @@
 ###
 # API
 ###
-articlesJSON = "http://10.51.218.159:8080/hackweek/articles" 
-#"/nytinder.framer/data/articles.json" #
-relatedJSON = "http://10.51.218.159:8080/hackweek/related" 
-#"/nytinder.framer/data/related.json" #
+articlesJSON = "data/articles.json"
+relatedJSON = "data/related.json"
 
 ###
 # USER DATA MANAGEMENT
